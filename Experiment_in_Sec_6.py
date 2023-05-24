@@ -188,7 +188,7 @@ for T in [1500, 2000,5000,10000,20000,50000,80000]:
     regret= 0
     regret_sample = []
     for i in range(50):
-        regret_sample.append(experiment2(T, noiselevel,interval)[1])
+        regret_sample.append(experiment1(T, noiselevel,interval)[1])
         
     regret = np.mean(regret_sample)
     low_CI_bound, high_CI_bound = st.t.interval(0.95, 50 - 1,loc=regret,scale=st.sem(regret_sample))
