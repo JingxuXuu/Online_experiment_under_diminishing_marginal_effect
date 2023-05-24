@@ -211,7 +211,7 @@ font = {'size':12}
 
 for i in range(500):
     T= 500000
-    output_list.append(experiment2(T, noiselevel,interval)[0])
+    output_list.append(experiment1(T, noiselevel,interval)[0])
 f = open('result_clt.txt', 'a')
 f.write(str(output_list)+'\n')
 f.close()
